@@ -49,6 +49,7 @@ namespace DAL
                 catch (Exception e)
                 {
                     MessageBox.Show(e.Message);
+                    //Hola
                 }
                 finally
                 {
