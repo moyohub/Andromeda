@@ -17,19 +17,21 @@ namespace BLL
 
         public BLLClass()
         {
-            DC = new DALClass("mysql5006.site4now.net", "a41be6_andro01", "wording", "root1234");
-            //DC = new DALClass("localhost", "apq", "root", "");
+            //DC = new DALClass("mysql5006.site4now.net", "a41be6_andro01", "wording", "root1234");
+            DC = new DALClass("localhost", "andromeda", "root", "root");
+            //DC = new DALClass("MYSQL5006.site4now.net", "db_a41be6_andro01", "a41be6_andro01", "root1234");
 
         }
 
-        public void ProcedimientoAlmacenado(string ProcedimientoAlmacenado, params object[] parametros)
+        public string[] ProcedimientoAlmacenado(string ProcedimientoAlmacenado, params object[] parametros)
         {
             List<MySqlParameter> parametrosentrada = new List<MySqlParameter>();
             List<MySqlParameter> parametrossalida = new List<MySqlParameter>();
+            string[] valorDevuelto = new string[2];
             vdtProcedureItems = new DataTable();
 
-            vdtProcedureItems = DC.Sql("select", "information_schema.parameters", "PARAMETER_NAME", "SPECIFIC_NAME = '" + ProcedimientoAlmacenado + "' and PARAMETER_MODE = 'IN' and SPECIFIC_SCHEMA = 'db_a299f8_aqp';");
-            //vdtProcedureItems = DC.Sql("select", "information_schema.parameters", "PARAMETER_NAME", "SPECIFIC_NAME = '" + ProcedimientoAlmacenado + "' and PARAMETER_MODE = 'IN' and SPECIFIC_SCHEMA = 'apq';");
+            //vdtProcedureItems = DC.Sql("select", "information_schema.parameters", "PARAMETER_NAME", "SPECIFIC_NAME = '" + ProcedimientoAlmacenado + "' and PARAMETER_MODE = 'IN' and SPECIFIC_SCHEMA = 'db_a299f8_aqp';");
+            vdtProcedureItems = DC.Sql("select", "information_schema.parameters", "PARAMETER_NAME", "SPECIFIC_NAME = '" + ProcedimientoAlmacenado + "' and PARAMETER_MODE = 'IN' and SPECIFIC_SCHEMA = 'andromeda';");
 
             if (Convert.ToInt32(parametros.Count()) == vdtProcedureItems.Rows.Count)
             {
@@ -38,12 +40,18 @@ namespace BLL
                     parametrosentrada.Add(new MySqlParameter(vdtProcedureItems.Rows[i]["PARAMETER_NAME"].ToString(), parametros[i].ToString()));
                 }
                 parametrossalida.Add(new MySqlParameter("$respuesta", ""));
+                parametrossalida.Add(new MySqlParameter("$estado", ""));
                 DC.ProcedimientoAlmacenado(ProcedimientoAlmacenado, parametrosentrada, parametrossalida);
-                MessageBox.Show(parametrossalida[0].Value.ToString());
+                valorDevuelto[0] = parametrossalida[0].Value.ToString();
+                valorDevuelto[1] = parametrossalida[1].Value.ToString();
+                return valorDevuelto;
+                //MessageBox.Show(parametrossalida[0].Value.ToString());
             }
             else
             {
                 MessageBox.Show("El numero de parametros no es el correcto");
+                valorDevuelto[0] = "0";
+                return valorDevuelto;
             }
         }
 

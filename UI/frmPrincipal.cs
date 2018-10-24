@@ -17,5 +17,19 @@ namespace UI
         {
             InitializeComponent();
         }
+
+        private void cargarForm(Form frmForm)
+        {
+          
+            frmForm.MdiParent = this;
+            frmForm.Show();
+        }
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmColor frm = new frmColor();
+            cargarForm(frm);
+
+        }
     }
 }

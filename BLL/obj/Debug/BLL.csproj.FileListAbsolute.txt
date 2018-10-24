@@ -1,0 +1,10 @@
+C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\BLL\bin\Debug\BLL.dll
+C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\BLL\bin\Debug\BLL.pdb
+C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\BLL\bin\Debug\DAL.dll
+C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\BLL\bin\Debug\MySql.Data.dll
+C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\BLL\bin\Debug\Google.Protobuf.dll
+C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\BLL\bin\Debug\DAL.pdb
+C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\BLL\bin\Debug\MySql.Data.xml
+C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\BLL\obj\Debug\BLL.dll
+C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\BLL\obj\Debug\BLL.pdb
