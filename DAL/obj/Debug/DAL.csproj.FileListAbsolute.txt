@@ -3,6 +3,7 @@ C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\DAL\bin\Debug\DAL.
 C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\DAL\bin\Debug\MySql.Data.dll
 C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\DAL\bin\Debug\Google.Protobuf.dll
 C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\DAL\bin\Debug\MySql.Data.xml
-C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\DAL\obj\Debug\DAL.dll
 C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\DAL\obj\Debug\DAL.pdb
+C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\DAL\bin\Debug\DAL.dll.CodeAnalysisLog.xml
+C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\DAL\bin\Debug\DAL.dll.lastcodeanalysissucceeded

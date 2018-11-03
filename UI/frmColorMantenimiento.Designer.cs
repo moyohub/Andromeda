@@ -1,6 +1,6 @@
 ﻿namespace UI
 {
-    partial class frmColorMantenimiento
+    partial class frmBotonMantenimiento
     {
         /// <summary>
         /// Required designer variable.
@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBotonMantenimiento));
             this.label1 = new System.Windows.Forms.Label();
             this.txtColor = new DevExpress.XtraEditors.TextEdit();
             this.btnAceptar = new DevExpress.XtraEditors.SimpleButton();
@@ -42,7 +43,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 69);
+            this.label1.Location = new System.Drawing.Point(38, 63);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 17);
             this.label1.TabIndex = 0;
@@ -50,9 +51,9 @@
             // 
             // txtColor
             // 
-            this.txtColor.Location = new System.Drawing.Point(98, 66);
+            this.txtColor.Location = new System.Drawing.Point(98, 60);
             this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(150, 24);
+            this.txtColor.Size = new System.Drawing.Size(150, 22);
             this.txtColor.TabIndex = 1;
             conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
             conditionValidationRule1.ErrorText = "Este campo es obligatorio";
@@ -61,34 +62,39 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(83, 122);
+            this.btnAceptar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAceptar.ImageOptions.Image")));
+            this.btnAceptar.Location = new System.Drawing.Point(34, 122);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.Size = new System.Drawing.Size(117, 32);
             this.btnAceptar.TabIndex = 2;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(173, 122);
+            this.btnCancelar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.ImageOptions.Image")));
+            this.btnCancelar.Location = new System.Drawing.Point(166, 122);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(117, 32);
             this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
             // 
-            // frmColorMantenimiento
+            // frmBotonMantenimiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(313, 179);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtColor);
             this.Controls.Add(this.label1);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmColorMantenimiento";
+            this.Name = "frmBotonMantenimiento";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Mantenimiento de Color";

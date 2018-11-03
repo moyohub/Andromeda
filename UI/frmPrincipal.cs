@@ -31,5 +31,10 @@ namespace UI
             cargarForm(frm);
 
         }
+
+        private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            
+        }
     }
 }

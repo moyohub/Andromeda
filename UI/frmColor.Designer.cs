@@ -39,9 +39,17 @@
             this.id_color = new DevExpress.XtraGrid.Columns.GridColumn();
             this.nombre_color = new DevExpress.XtraGrid.Columns.GridColumn();
             this.estado_color = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.acNoti = new DevExpress.XtraBars.Alerter.AlertControl(this.components);
+            this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             ((System.ComponentModel.ISupportInitialize)(this.gcGrid)).BeginInit();
             this.cmsMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvVista)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             this.SuspendLayout();
             // 
             // ssmWait
@@ -52,11 +60,11 @@
             // 
             this.gcGrid.ContextMenuStrip = this.cmsMenu;
             this.gcGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcGrid.Location = new System.Drawing.Point(0, 0);
+            this.gcGrid.Location = new System.Drawing.Point(0, 179);
             this.gcGrid.LookAndFeel.SkinMaskColor = System.Drawing.Color.Transparent;
             this.gcGrid.MainView = this.gvVista;
             this.gcGrid.Name = "gcGrid";
-            this.gcGrid.Size = new System.Drawing.Size(759, 392);
+            this.gcGrid.Size = new System.Drawing.Size(759, 173);
             this.gcGrid.TabIndex = 0;
             this.gcGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvVista});
@@ -69,13 +77,13 @@
             this.modificarToolStripMenuItem,
             this.eliminarToolStripMenuItem});
             this.cmsMenu.Name = "contextMenuStrip1";
-            this.cmsMenu.Size = new System.Drawing.Size(180, 110);
+            this.cmsMenu.Size = new System.Drawing.Size(147, 82);
             // 
             // nuevoToolStripMenuItem
             // 
             this.nuevoToolStripMenuItem.Image = global::UI.Properties.Resources.nuevo_menu;
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
             this.nuevoToolStripMenuItem.Text = "Nuevo";
             this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
             // 
@@ -83,7 +91,7 @@
             // 
             this.modificarToolStripMenuItem.Image = global::UI.Properties.Resources.modificar_menu;
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
             this.modificarToolStripMenuItem.Text = "Modificar";
             this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);
             // 
@@ -91,7 +99,7 @@
             // 
             this.eliminarToolStripMenuItem.Image = global::UI.Properties.Resources.borrar_menu;
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
@@ -126,18 +134,68 @@
             this.estado_color.FieldName = "estado_color";
             this.estado_color.Name = "estado_color";
             // 
+            // ribbonControl1
+            // 
+            this.ribbonControl1.ExpandCollapseItem.Id = 0;
+            this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.ribbonControl1.ExpandCollapseItem});
+            this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
+            this.ribbonControl1.MaxItemId = 1;
+            this.ribbonControl1.Name = "ribbonControl1";
+            this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
+            this.ribbonPage1});
+            this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
+            this.ribbonControl1.Size = new System.Drawing.Size(759, 179);
+            this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
+            // 
+            // ribbonPage1
+            // 
+            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup1,
+            this.ribbonPageGroup2});
+            this.ribbonPage1.Name = "ribbonPage1";
+            this.ribbonPage1.Text = "ribbonPage1";
+            // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
+            // 
+            // ribbonPageGroup2
+            // 
+            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            this.ribbonPageGroup2.Text = "ribbonPageGroup2";
+            // 
+            // ribbonStatusBar1
+            // 
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 352);
+            this.ribbonStatusBar1.Name = "ribbonStatusBar1";
+            this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(759, 40);
+            // 
+            // ribbonPage2
+            // 
+            this.ribbonPage2.Name = "ribbonPage2";
+            this.ribbonPage2.Text = "ribbonPage2";
+            // 
             // frmColor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(759, 392);
             this.Controls.Add(this.gcGrid);
+            this.Controls.Add(this.ribbonStatusBar1);
+            this.Controls.Add(this.ribbonControl1);
             this.Name = "frmColor";
+            this.Ribbon = this.ribbonControl1;
+            this.StatusBar = this.ribbonStatusBar1;
             this.Text = "Color";
             ((System.ComponentModel.ISupportInitialize)(this.gcGrid)).EndInit();
             this.cmsMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gvVista)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -153,5 +211,12 @@
         private DevExpress.XtraGrid.Columns.GridColumn nombre_color;
         private DevExpress.XtraGrid.Columns.GridColumn estado_color;
         private DevExpress.XtraSplashScreen.SplashScreenManager ssmWait;
+        private DevExpress.XtraBars.Alerter.AlertControl acNoti;
+        private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
     }
 }

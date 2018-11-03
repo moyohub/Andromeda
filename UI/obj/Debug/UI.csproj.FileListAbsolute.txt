@@ -101,6 +101,8 @@ C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\UI\bin\Debug\ja\De
 C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\UI\bin\Debug\ru\DevExpress.Office.v17.1.Core.resources.dll
 C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\UI\obj\Debug\UI.frmColor.resources
 C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\UI\obj\Debug\UI.frmPrincipal.resources
-C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\UI\obj\Debug\UI.frmColorMantenimiento.resources
 C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\UI\bin\Debug\DevExpress.BonusSkins.v17.1.dll
 C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\UI\obj\Debug\UI.frmEspera.resources
+C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\UI\obj\Debug\UI.frmBotonMantenimiento.resources
+C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\UI\bin\Debug\UI.exe.CodeAnalysisLog.xml
+C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\UI\bin\Debug\UI.exe.lastcodeanalysissucceeded

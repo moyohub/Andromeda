@@ -17,7 +17,7 @@ namespace BLL
 
         public BLLClass()
         {
-            //DC = new DALClass("mysql5006.site4now.net", "a41be6_andro01", "wording", "root1234");
+            //DC = new DALClass("208.118.63.26", "a41be6_andro01", "wording", "root1234");
             DC = new DALClass("localhost", "andromeda", "root", "root");
             //DC = new DALClass("MYSQL5006.site4now.net", "db_a41be6_andro01", "a41be6_andro01", "root1234");
 
@@ -40,7 +40,7 @@ namespace BLL
                     parametrosentrada.Add(new MySqlParameter(vdtProcedureItems.Rows[i]["PARAMETER_NAME"].ToString(), parametros[i].ToString()));
                 }
                 parametrossalida.Add(new MySqlParameter("$respuesta", ""));
-                parametrossalida.Add(new MySqlParameter("$estado", ""));
+                parametrossalida.Add(new MySqlParameter("$bandera", ""));
                 DC.ProcedimientoAlmacenado(ProcedimientoAlmacenado, parametrosentrada, parametrossalida);
                 valorDevuelto[0] = parametrossalida[0].Value.ToString();
                 valorDevuelto[1] = parametrossalida[1].Value.ToString();
@@ -67,5 +67,8 @@ namespace BLL
 
             return DC.Consulta(ProcedimientoAlmacenado, parametrosentrada);
         }
+      
+
+
     }
 }

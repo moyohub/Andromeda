@@ -12,7 +12,7 @@ using BLL;
 
 namespace UI
 {
-    public partial class frmColorMantenimiento : DevExpress.XtraEditors.XtraForm
+    public partial class frmBotonMantenimiento : DevExpress.XtraEditors.XtraForm
     {
         BLLClass BC = new BLLClass();
         DataTable vdtDatos = new DataTable();
@@ -21,7 +21,7 @@ namespace UI
         public bool vBandera = false;
 
 
-        public frmColorMantenimiento(string vId)
+        public frmBotonMantenimiento(string vId)
         {
             InitializeComponent();
             vIdColor = vId;
@@ -99,5 +99,12 @@ namespace UI
         {
             this.Close();
         }
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        
     }
 }

@@ -12,7 +12,7 @@ using BLL;
 
 namespace UI
 {
-    public partial class frmColor : DevExpress.XtraEditors.XtraForm
+    public partial class frmColor : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         BLLClass BC = new BLLClass();
         DataTable vdtGrid = new DataTable();
@@ -41,7 +41,7 @@ namespace UI
 
         private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmColorMantenimiento frm = new frmColorMantenimiento("");
+            frmBotonMantenimiento frm = new frmBotonMantenimiento("");
             frm.ShowDialog();
             CargarGrid();
             
@@ -49,8 +49,12 @@ namespace UI
 
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmColorMantenimiento frm = new frmColorMantenimiento(gvVista.GetRowCellValue(gvVista.FocusedRowHandle, "id_color").ToString());
+            frmBotonMantenimiento frm = new frmBotonMantenimiento(gvVista.GetRowCellValue(gvVista.FocusedRowHandle, "id_color").ToString());
             frm.ShowDialog();
+            if (frm.vBandera)
+            {
+
+            }
             CargarGrid();
         }
 
