@@ -104,5 +104,5 @@ C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\UI\obj\Debug\UI.fr
 C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\UI\bin\Debug\DevExpress.BonusSkins.v17.1.dll
 C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\UI\obj\Debug\UI.frmEspera.resources
 C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\UI\obj\Debug\UI.frmBotonMantenimiento.resources
-C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\UI\bin\Debug\UI.exe.CodeAnalysisLog.xml
-C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\UI\bin\Debug\UI.exe.lastcodeanalysissucceeded
+C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\UI\obj\Debug\UI.frmBoton.resources
+C:\Users\moise\OneDrive\Escritorio\Proyectos\Github\Andromeda\UI\obj\Debug\UI.frmBotonMant.resources

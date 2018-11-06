@@ -27,7 +27,7 @@ namespace UI
 
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
         {
-            frmColor frm = new frmColor();
+            frmBoton frm = new frmBoton();
             cargarForm(frm);
 
         }

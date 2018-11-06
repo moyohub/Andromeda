@@ -57,17 +57,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmColor.cs">
+    <Compile Include="frmBoton.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmColor.Designer.cs">
-      <DependentUpon>frmColor.cs</DependentUpon>
+    <Compile Include="frmBoton.Designer.cs">
+      <DependentUpon>frmBoton.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmColorMantenimiento.cs">
+    <Compile Include="frmBotonMant.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmColorMantenimiento.Designer.cs">
-      <DependentUpon>frmColorMantenimiento.cs</DependentUpon>
+    <Compile Include="frmBotonMant.Designer.cs">
+      <DependentUpon>frmBotonMant.cs</DependentUpon>
     </Compile>
     <Compile Include="frmEspera.cs">
       <SubType>Form</SubType>
@@ -81,13 +81,14 @@
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Funciones.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmColor.resx">
-      <DependentUpon>frmColor.cs</DependentUpon>
+    <EmbeddedResource Include="frmBoton.resx">
+      <DependentUpon>frmBoton.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmColorMantenimiento.resx">
-      <DependentUpon>frmColorMantenimiento.cs</DependentUpon>
+    <EmbeddedResource Include="frmBotonMant.resx">
+      <DependentUpon>frmBotonMant.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEspera.resx">
       <DependentUpon>frmEspera.cs</DependentUpon>

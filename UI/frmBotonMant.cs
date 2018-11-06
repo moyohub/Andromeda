@@ -12,20 +12,18 @@ using BLL;
 
 namespace UI
 {
-    public partial class frmBotonMantenimiento : DevExpress.XtraEditors.XtraForm
+    public partial class frmBotonMant : DevExpress.XtraEditors.XtraForm
     {
         BLLClass BC = new BLLClass();
+        Funciones FC = new Funciones();
         DataTable vdtDatos = new DataTable();
-        string vIdColor;
+        string vId;
         string[] vDevuelto = new string[2];
-        public bool vBandera = false;
-
-
-        public frmBotonMantenimiento(string vId)
+        public frmBotonMant(string id)
         {
             InitializeComponent();
-            vIdColor = vId;
-            if ((vIdColor == "0") || (vIdColor == ""))
+            vId = id;
+            if ((vId == "0") || (vId == ""))
             {
 
             }
@@ -33,64 +31,13 @@ namespace UI
             {
                 try
                 {
-                    vdtDatos = BC.Consulta("paccolor", 2, vIdColor, 0, 0);
-                    vdtDatos.Rows[0]["id_color"].ToString();
-                    txtColor.Text = vdtDatos.Rows[0]["nombre_color"].ToString();
-                                    }
-                catch (Exception ex)
-                {
-                    XtraMessageBox.Show(ex.Message);
-                }
-            }
-        }
-
-        private void recargarFormulario()
-        {
-            txtColor.Text = "";
-        }
-        private void btnAceptar_Click(object sender, EventArgs e)
-        {
-            vpValidar.Validate();
-            if ((vIdColor == "0") || (vIdColor == ""))
-            {
-                //Insertar
-                try
-                {
-                   vDevuelto = BC.ProcedimientoAlmacenado("pamcolor",1,0,txtColor.Text);
-                    if (vDevuelto[1] == "1")
-                    {
-                        XtraMessageBox.Show(vDevuelto[0]);
-                        recargarFormulario();
-                    }
-                    else
-                    {
-                        XtraMessageBox.Show(vDevuelto[0]);
-                    }
+                    vdtDatos = BC.Consulta("pacboton", 2, vId, 0, 0);
+                    vdtDatos.Rows[0]["id_boton"].ToString();
+                    txtBoton.Text = vdtDatos.Rows[0]["nombre_boton"].ToString();
                 }
                 catch (Exception ex)
                 {
-                    XtraMessageBox.Show(ex.Message);
-                }
-            }
-            else
-            {
-                //Modificar
-                try
-                {
-                    vDevuelto = BC.ProcedimientoAlmacenado("pamcolor", 2, vIdColor, txtColor.Text);
-                    if (vDevuelto[1] == "1")
-                    {
-                        XtraMessageBox.Show(vDevuelto[0]);
-                        this.Close();
-                    }
-                    else
-                    {
-                        XtraMessageBox.Show(vDevuelto[0]);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    XtraMessageBox.Show(ex.Message);
+                    acNoti.Show(this,FC.nombreSistema,ex.Message);
                 }
             }
         }
@@ -100,11 +47,55 @@ namespace UI
             this.Close();
         }
 
-        private void btnCancelar_Click_1(object sender, EventArgs e)
+        private void btnAceptar_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
+            vpValidar.Validate();
+            if ((vId == "0") || (vId == ""))
+            {
+                //Insertar
+                try
+                {
+                    vDevuelto = BC.ProcedimientoAlmacenado("pamboton", 1, 0, txtBoton.Text);
+                    if (vDevuelto[1] == "1")
+                    {
+                        acNoti.Show(this, FC.nombreSistema, vDevuelto[0]);
+                        this.Close();
 
-        
+                    }
+                    else
+                    {
+                        acNoti.Show(this, FC.nombreSistema, vDevuelto[0]);
+                        this.Close();
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    acNoti.Show(this, FC.nombreSistema, ex.Message);
+                }
+            }
+            else
+            {
+                //Modificar
+                try
+                {
+                    vDevuelto = BC.ProcedimientoAlmacenado("pamboton", 2, vId, txtBoton.Text);
+                    if (vDevuelto[1] == "1")
+                    {
+                        
+                        acNoti.Show(this, FC.nombreSistema, vDevuelto[0]);
+                        this.Close();
+                    }
+                    else
+                    {
+                        acNoti.Show(this, FC.nombreSistema, vDevuelto[0]);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    acNoti.Show(this, FC.nombreSistema, ex.Message);
+                }
+            }
+        }
     }
 }
